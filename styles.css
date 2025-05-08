@@ -1,0 +1,283 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  color: #000;
+  background: #fff;
+  line-height: 1.5;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background-color: #c8c6f5;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.menu-button {
+  margin-right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-icon {
+  height: 24px;
+  width: 24px;
+}
+
+.logo-placeholder {
+  background-color: #d9d9d9;
+  padding: 8px 16px;
+  text-align: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.login-button {
+  font-size: 14px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.get-started-button {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 4px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.chevron-icon {
+  height: 16px;
+  width: 16px;
+  margin-left: 4px;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0 16px;
+}
+
+.hero-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero-description {
+  max-width: 36rem;
+  margin: 0 auto 32px auto;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.creator-button {
+  background-color: #c8c6f5;
+  padding: 8px 24px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Content Section */
+.content-section {
+  border-top: 1px solid #e5e7eb;
+  padding: 48px 16px;
+}
+
+.content-container {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.content-text {
+  margin-bottom: 32px;
+}
+
+.content-image-placeholder {
+  background-color: #d9d9d9;
+  width: 100%;
+  height: 80vh;
+}
+
+/* Why Choose Us Section */
+.why-choose-section {
+  border-top: 1px solid #e5e7eb;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.why-choose-container {
+  max-width: 72rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.section-description {
+  max-width: 36rem;
+  margin: 0 auto 48px auto;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-image {
+  background-color: #d9d9d9;
+  aspect-ratio: 1 / 1;
+  margin-bottom: 16px;
+}
+
+.testimonial-text {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* FAQs Section */
+.faqs-section {
+  border-top: 1px solid #e5e7eb;
+  padding: 64px 16px;
+}
+
+.faqs-container {
+  max-width: 72rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.faqs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.faq-item {
+  background-color: #d9d9d9;
+  height: 64px;
+}
+
+/* Footer */
+.footer {
+  background-color: #c8c6f5;
+  padding: 32px 16px;
+}
+
+.footer-container {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.footer-logo {
+  background-color: #d9d9d9;
+  height: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .faqs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .faqs-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
